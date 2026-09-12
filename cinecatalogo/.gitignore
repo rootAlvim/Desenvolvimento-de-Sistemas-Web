@@ -1,0 +1,22 @@
+# --- Ambiente Virtual (Sua venv) ---
+venv/
+.venv/
+
+# --- Django e Banco de Dados ---
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+__pycache__/
+*.py[cod]
+
+# --- Configurações do VS Code ou outros editores ---
+.vscode/
+.idea/
+.env
+
+# --- Sistema Operacional ---
+.DS_Store
+Thumbs.db
