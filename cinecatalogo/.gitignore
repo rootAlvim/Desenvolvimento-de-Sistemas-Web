@@ -1,37 +1,21 @@
-# --- Python ---
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
+# --- Ambiente Virtual (Sua venv) ---
 venv/
-ENV/
-env.bak/
-venv.bak/
+.venv/
 
-# --- Django ---
+# --- Django e Banco de Dados ---
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media/
 staticfiles/
+__pycache__/
+*.py[cod]
 
-# --- Ambientes Virtuais e Dependências ---
-.env
-.venv
-poetry.lock
-pip-wheel-metadata/
-
-# --- Editores de Código e IDEs ---
+# --- Configurações do VS Code ou outros editores ---
 .vscode/
 .idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.swp
+.env
 
 # --- Sistema Operacional ---
 .DS_Store
