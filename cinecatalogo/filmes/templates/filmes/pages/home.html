@@ -1,122 +1,19 @@
 {% include 'filmes/partials/head.html' %}
+
 <body>
+    {%include 'filmes/partials/header.html'%}
 
-    <!-- CABEÇALHO -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">CineCatalogo
-            </div>
-
-            <!-- Barra de Filtros -->
-            <div class="controls">
-                <button class="filter-btn active" onclick="filterMovies('all', this)">Todos</button>
-                <button class="filter-btn" onclick="filterMovies('action', this)">Ação</button>
-                <button class="filter-btn" onclick="filterMovies('scifi', this)">Ficção</button>
-                <button class="filter-btn" onclick="filterMovies('drama', this)">Drama</button>
-            </div>
-        </div>
-    </header>
 
     <!-- GRADE DE FILMES -->
     <main class="container">
+
         <div class="movie-grid" id="movieGrid">
 
-            <!-- Filme 1 -->
-            <div class="movie-card" data-category="scifi">
-                <div class="movie-poster">Capa Interestelar</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">Interestelar</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Ficção</span>
-                        <span class="rating">★ 8.7</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Filme 2 -->
-            <div class="movie-card" data-category="action">
-                <div class="movie-poster">Capa Mad Max</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">Mad Max: Estrada da Fúria</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Ação</span>
-                        <span class="rating">★ 8.1</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Filme 3 -->
-            <div class="movie-card" data-category="drama">
-                <div class="movie-poster">Capa Oppenheimer</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">Oppenheimer</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Drama</span>
-                        <span class="rating">★ 8.4</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Filme 4 -->
-            <div class="movie-card" data-category="scifi">
-                <div class="movie-poster">Capa Blade Runner</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">Blade Runner 2049</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Ficção</span>
-                        <span class="rating">★ 8.0</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Filme 5 -->
-            <div class="movie-card" data-category="action">
-                <div class="movie-poster">Capa John Wick</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">John Wick 4</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Ação</span>
-                        <span class="rating">★ 7.8</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Filme 6 -->
-            <div class="movie-card" data-category="drama">
-                <div class="movie-poster">Capa O Coringa</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">Coringa</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Drama</span>
-                        <span class="rating">★ 8.4</span>
-                    </div>
-                </div>
-            </div>
-            <div class="movie-card" data-category="drama">
-                <div class="movie-poster">Capa O Coringa</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">Coringa</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Drama</span>
-                        <span class="rating">★ 8.4</span>
-                    </div>
-                </div>
-            </div>
-            <div class="movie-card" data-category="drama">
-                <div class="movie-poster">Capa O Coringa</div>
-                <div class="movie-info">
-                    <h3 class="movie-title">Coringa</h3>
-                    <div class="movie-meta">
-                        <span class="tag">Drama</span>
-                        <span class="rating">★ 8.4</span>
-                    </div>
-                </div>
-            </div>
-
+            {%include 'filmes/partials/cards.html'%}
 
         </div>
     </main>
-
+    {%include 'filmes/partials/footer.html'%}
 
 </body>
 
