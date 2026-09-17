@@ -1,4 +1,3 @@
-/* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -318,4 +317,53 @@ header {
     .movie-poster {
         height: 240px;
     }
+}
+.movie-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.movie-card {
+    background: #1c1c1c;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info {
+    padding: 1rem;
+}
+
+.movie-title {
+    color: white;
+    margin-bottom: 0.7rem;
+}
+
+.movie-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    color: #aaa;
+    font-size: 0.75rem;
+}
+
+.rating {
+    color: #ffb000;
+    font-weight: bold;
 }

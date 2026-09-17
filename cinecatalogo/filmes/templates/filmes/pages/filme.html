@@ -1,0 +1,39 @@
+{% extends "filmes/pages/base.html" %}
+{% block title%}Filme{% endblock %}
+{% block content %}
+
+<section class="movie-detail">
+    <div class="movie-detail-poster">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWW192rWnZEqlV6mSQugd2UNlebMqwgi9mgFHea3ttN9U30QONDbtTvAjX&s=10"
+            alt="Filme">
+    </div>
+
+    <div class="movie-detail-content">
+        <span class="detail-tag">Ficção</span>
+        <h1>Mad Max: Estrada da Fúria</h1>
+
+        <div class="movie-detail-meta">
+            <span>★ 8.1</span>
+            <span>2015</span>
+            <span>2h 09m</span>
+        </div>
+
+        <p class="sinopse">
+            Em um mundo pós-apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não
+            depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê
+            no meio de uma guerra mortal iniciada pela Imperatriz Furiosa, que tenta salvar um grupo de garotas.
+            Também tentando fugir, Max aceita ajudá-la.
+        </p>
+
+        <ul class="detail-list">
+            <li><strong>Direção:</strong> George Miller</li>
+            <li><strong>Elenco:</strong> Matthew McConaughey, Anne Hathaway</li>
+        </ul>
+
+        <div class="detail-actions">
+            <a href="#" class="btn btn-primary">Assistir trailer</a>
+            <a href="{% url 'home' %}" class="btn btn-secondary">Voltar</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

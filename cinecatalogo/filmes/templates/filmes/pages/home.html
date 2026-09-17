@@ -1,20 +1,24 @@
-{% include 'filmes/partials/head.html' %}
+{% extends "filmes/pages/base.html" %}
+{% block title %}Filmes{% endblock %}
 
-<body>
-    {%include 'filmes/partials/header.html'%}
-
-
-    <!-- GRADE DE FILMES -->
-    <main class="container">
-
-        <div class="movie-grid" id="movieGrid">
-
-            {%include 'filmes/partials/cards.html'%}
-
+{% block content %}
+<div class="movie-grid" id="movieGrid">
+    {% for filme in filmes %}
+  
+    <a href="  {% url 'filmes' filme.id %}" class="movie-link">
+        <div class="movie-card" data-category="{{ filme.categoria|lower }}">
+            <div class="movie-poster">
+                <img src="{{ filme.imagem }}" alt="{{ filme.titulo }}">
+            </div>
+            <div class="movie-info">
+                <h3 class="movie-title">{{ filme.titulo }}</h3>
+                <div class="movie-meta">
+                    <span class="tag">{{ filme.categoria }}</span>
+                    <span class="rating">★ {{ filme.nota }}</span>
+                </div>
+            </div>
         </div>
-    </main>
-    {%include 'filmes/partials/footer.html'%}
-
-</body>
-
-</html>
+    </a>
+{% endfor %}
+</div>
+{% endblock %}
