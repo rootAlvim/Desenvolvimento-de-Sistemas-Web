@@ -5,6 +5,7 @@
 <div class="movie-grid" id="movieGrid">
     {% for filme in filmes %}
   
+    
     <a href="  {% url 'filmes' filme.id %}" class="movie-link">
         <div class="movie-card" data-category="{{ filme.categoria|lower }}">
             <div class="movie-poster">
