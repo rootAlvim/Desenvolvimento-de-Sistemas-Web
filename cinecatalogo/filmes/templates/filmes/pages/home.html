@@ -1,25 +1,24 @@
 {% extends "filmes/pages/base.html" %}
 {% block title %}Filmes{% endblock %}
-
 {% block content %}
+
 <div class="movie-grid" id="movieGrid">
     {% for filme in filmes %}
-  
-    
+
     <a href="  {% url 'filmes' filme.id %}" class="movie-link">
-        <div class="movie-card" data-category="{{ filme.categoria|lower }}">
+        <div class="movie-card" data-category="{{ filme.categoria.nome|lower }}">
             <div class="movie-poster">
-                <img src="{{ filme.imagem }}" alt="{{ filme.titulo }}">
+                <img src="{{ filme.imagem_capa.url }}" alt="{{ filme.title }}">
             </div>
             <div class="movie-info">
-                <h3 class="movie-title">{{ filme.titulo }}</h3>
+                <h3 class="movie-title">{{ filme.title }}</h3>
                 <div class="movie-meta">
-                    <span class="tag">{{ filme.categoria }}</span>
-                    <span class="rating">★ {{ filme.nota }}</span>
+                    <span class="tag">{{ filme.categoria.nome }}</span>
+                    <span class="rating">★8.1</span>
                 </div>
             </div>
         </div>
     </a>
-{% endfor %}
+    {% endfor %}
 </div>
 {% endblock %}

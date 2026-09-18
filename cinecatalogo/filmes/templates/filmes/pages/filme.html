@@ -1,33 +1,29 @@
 {% extends "filmes/pages/base.html" %}
-{% block title%}Filme{% endblock %}
+{% block title%}{{ filme.title }}{% endblock %}
 {% block content %}
 
 <section class="movie-detail">
     <div class="movie-detail-poster">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWW192rWnZEqlV6mSQugd2UNlebMqwgi9mgFHea3ttN9U30QONDbtTvAjX&s=10"
-            alt="Filme">
+        <img src="{{ filme.imagem_capa.url }}" alt="{{ filme.title }}">
     </div>
 
     <div class="movie-detail-content">
-        <span class="detail-tag">Ficção</span>
-        <h1>Mad Max: Estrada da Fúria</h1>
+        <span class="detail-tag">{{ filme.categoria.nome }}</span>
+        <h1>{{ filme.title }}</h1>
 
         <div class="movie-detail-meta">
             <span>★ 8.1</span>
-            <span>2015</span>
-            <span>2h 09m</span>
+            <span>{{filme.ano_lancamento}}</span>
+            <span>{{filme.duracao}}h 32m</span>
         </div>
 
         <p class="sinopse">
-            Em um mundo pós-apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não
-            depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê
-            no meio de uma guerra mortal iniciada pela Imperatriz Furiosa, que tenta salvar um grupo de garotas.
-            Também tentando fugir, Max aceita ajudá-la.
+            {{ filme.sinopse }}
         </p>
 
         <ul class="detail-list">
-            <li><strong>Direção:</strong> George Miller</li>
-            <li><strong>Elenco:</strong> Matthew McConaughey, Anne Hathaway</li>
+            <li><strong>Direção:</strong>{{ filme.diretor}}</li>
+            <li><strong>Elenco:</strong>Leonardo Dicaprio, Mark Rufallo</li>
         </ul>
 
         <div class="detail-actions">
